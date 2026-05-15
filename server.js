@@ -66,7 +66,7 @@ async function initiateSTKPush(phoneNumber, amount) {
         "PartyA": phoneNumber,
         "PartyB": businessShortCode,
         "PhoneNumber": phoneNumber,
-        "CallBackURL": "https://mydomain.com/path", // This is where Safaricom sends the result
+        "CallBackURL": "https://premium-boutique.onrender.com/mpesa-callback", // <-- Use YOUR actual Render link here!
         "AccountReference": "PremiumBoutique",
         "TransactionDesc": "Payment for Fashion Items"
     };
