@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - <%= storeName %></title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f4; margin: 0; }
+        .container { max-width: 600px; margin: 50px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background: #27ae60; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-size: 16px; }
+        button:hover { background: #219150; }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="/" style="text-decoration: none; color: #333;">&larr; Back to Shop</a>
+    </div>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Have a question about an order? Send us a message below!</p>
+        
+        <form action="/submit-contact" method="POST">
+            <label>Your Name</label>
+            <input type="text" name="name" required>
+            
+            <label>Your Email</label>
+            <input type="email" name="email" required>
+            
+            <label>Message</label>
+            <textarea name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
