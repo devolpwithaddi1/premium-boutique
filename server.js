@@ -1,5 +1,10 @@
 const express = require('express');
-const sqlite3 = require('sqlite3').verbose();
+const { createClient } = require('@libsql/client');
+
+const db = createClient({
+  url: process.env.TURSO_DATABASE_URL,
+  authToken: process.env.TURSO_AUTH_TOKEN
+});
 const session = require('express-session'); // 1. Bring in the session tool
 const app = express();
 
